@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+   --principal-color: linear-gradient(90deg, #4D51F0, #3436A3, #292B81);;
+}
+
+* {
+   font-family: "Inter", sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+#main-box {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: var(--principal-color);
+   color: white;
+}
+
+#calc {
+   background-color: #262626;
+   padding: 40px;
+   border-radius: 25px;
+   box-shadow: 8px 10px 10px  rgba(0, 0, 0, .323);
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+#calc h2 {
+   font-size: 30px;
+   position: relative;
+}
+
+#calc h2:before {
+   position: absolute;
+   content: '';
+   height: 3px;
+   width: 150px;
+   background: var(--principal-color);
+   bottom: 3px;
+} 
+
+#input-box {
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+}
+
+.input-box-field {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.input-box-field label {
+   font-size: 15px;
+   color: #c8c8c8;
+   font-weight: 500;
+}
+
+.input-box-field input {
+   background-color: transparent;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid white;
+   color: white;
+   font-size: 20px;
+   padding: 5px;
+}
+
+#result-box {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.result-title {
+   font-size: 18px;
+}
+
+#total {
+   margin-top: 10px;
+   font-size: 40px;
+}
+
+.bt {
+   background: var(--principal-color);
+   border: none;
+   padding: 10px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   border-radius: 50px;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 400px){
+   body {
+      overflow: hidden;
+   }
+
+   #calc {
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+   }
+
+   #calc h2 {
+      font-size: 20px;
+   }
+
+   .bt {
+      width: 200px;
+   }
+
+   #calc h2:before {
+      width: 100px;
+   }
+}
